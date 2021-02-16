@@ -1,6 +1,6 @@
-# flutter_app
+# flutter-test
 
-A new Flutter application.
+A very, very simple Flutter app for testing and study purposes.
 
 ## Getting Started
 
