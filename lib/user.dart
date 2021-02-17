@@ -26,7 +26,7 @@ class _UserPageState extends State<UserPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(githubData == null || githubData.bio == null ? 'Find a user' : 'Bio: ${githubData.bio}'),
+            githubData != null ? Text('${githubData.bio}') : Text('Find a user\'s bio on GitHub'),
             Container(
               width: 180,
               child: TextField(
@@ -61,11 +61,12 @@ class _UserPageState extends State<UserPage> {
 }
 
 class GithubData {
+  final String username;
   final String bio;
 
-  GithubData({this.bio});
+  GithubData({this.username, this.bio});
 
   factory GithubData.fromJson(Map<String, dynamic> json) {
-    return GithubData(bio: json['bio']);
+    return GithubData(username: json['username'], bio: json['bio']);
   }
 }
