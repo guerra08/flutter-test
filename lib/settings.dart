@@ -1,16 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MySettingsPage extends StatefulWidget{
-  MySettingsPage({Key key, this.title}) : super(key: key);
+class SettingsPage extends StatefulWidget{
+  SettingsPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MySettingsPageState createState() => _MySettingsPageState();
+  _SettingsPageState createState() => _SettingsPageState();
 }
 
-class _MySettingsPageState extends State<MySettingsPage>{
+class _SettingsPageState extends State<SettingsPage>{
 
   @override
   Widget build(BuildContext context) {

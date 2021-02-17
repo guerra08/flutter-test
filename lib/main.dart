@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'My Flutter demo'),
+      home: HomePage(title: 'My Flutter demo'),
     );
   }
 }

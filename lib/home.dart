@@ -1,23 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_app/settings.dart';
 import 'package:flutter_app/user.dart';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class HomePage extends StatefulWidget {
+  HomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   int _pageIndex = 0;
 
   final List<Widget> _screens = [
-    MyUserPage(title: 'User'),
-    MySettingsPage(title: 'Settings')
+    UserPage(title: 'User'),
+    SettingsPage(title: 'Settings')
   ];
 
   @override

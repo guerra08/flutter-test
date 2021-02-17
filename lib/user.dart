@@ -1,19 +1,18 @@
 import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class MyUserPage extends StatefulWidget{
-  MyUserPage({Key key, this.title}) : super(key: key);
+class UserPage extends StatefulWidget{
+  UserPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyUserPageState createState() => _MyUserPageState();
+  _UserPageState createState() => _UserPageState();
 }
 
-class _MyUserPageState extends State<MyUserPage> {
+class _UserPageState extends State<UserPage> {
   String username = "";
   GithubData githubData;
 
