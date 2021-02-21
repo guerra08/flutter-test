@@ -34,7 +34,7 @@ class _UserPageState extends State<UserPage> {
               ),
             ),
             isLoading
-                ? SpinKitRotatingCircle(
+                ? SpinKitFadingCircle(
                     color: Colors.red,
                     size: 50.0,
                   )
@@ -63,10 +63,11 @@ class _UserPageState extends State<UserPage> {
 class GithubData {
   final String username;
   final String bio;
+  final String imgUrl;
 
-  GithubData({this.username, this.bio});
+  GithubData({this.username, this.bio, this.imgUrl});
 
   factory GithubData.fromJson(Map<String, dynamic> json) {
-    return GithubData(username: json['username'], bio: json['bio']);
+    return GithubData(username: json['username'], bio: json['bio'], imgUrl: json['avatar_url']);
   }
 }
